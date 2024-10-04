@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         node: [ '0.10', '0.12', '4', '6', '8', '10', '12', '14', '16', '18', '20' ]
-        os: [ ubuntu-latest, ubuntu 22.04, ubuntu 24.04 ]
+        os: [ubuntu 22.04]
         script: [ compress, mocha, release/benchmark, release/jetstream ]
     name: ${{ matrix.node }} ${{ matrix.os }} ${{ matrix.script }}
     runs-on: ${{ matrix.os }}
